@@ -4,7 +4,7 @@ project(Life)
 set(CMAKE_CXX_STANDARD 17)
 
 set(EXECUTABLE_NAME "Life")
-add_executable(${EXECUTABLE_NAME} src/main.cpp)
+add_executable(${EXECUTABLE_NAME} src/main.cpp src/Window.cpp src/Window.h src/Cells.cpp src/Cells.h)
 
 # Detect and add SFML
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
