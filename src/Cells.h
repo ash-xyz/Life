@@ -5,10 +5,15 @@
 #ifndef LIFE_CELLS_H
 #define LIFE_CELLS_H
 
+#include "vector"
 
 class Cells {
+    std::vector<std::vector<bool>> cells;
+    int width;
+    int height;
 public:
-    Cells(int x, int y);
+    Cells(int width, int height);
+    ~Cells();
 
     /**
      * Outputs whether a cell is Active or Not
@@ -30,7 +35,7 @@ public:
      * @param y: location along the y axis
      * @param x: location along the x axis
      */
-    void switchCell(int m, int n);
+    void switchCell(int y, int x);
 };
 
 
