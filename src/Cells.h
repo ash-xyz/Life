@@ -8,11 +8,32 @@
 #include "vector"
 
 class Cells {
-    std::vector<std::vector<bool>> cells;
-    int width;
-    int height;
+private:
+    unsigned char *cells;
+    unsigned char *temp;
+    unsigned int width;
+    unsigned int height;
+    unsigned int length;
+
+    /**
+     * Switches Cell on
+     *
+     * @param y: location along y axis
+     * @param x: location along x axis
+     */
+    void setCell(unsigned int y, unsigned int x);
+
+    /**
+     * Switches Cell off
+     *
+     * @param y: location along y axis
+     * @param x: location along x axis
+     */
+    void clearCell(unsigned int y, unsigned int x);
+
 public:
-    Cells(int width, int height);
+    Cells(unsigned int width, unsigned int height);
+
     ~Cells();
 
     /**
@@ -36,6 +57,13 @@ public:
      * @param x: location along the x axis
      */
     void switchCell(int y, int x);
+
+    /**
+     * Randomly initializes the cells
+     *
+     * @param seed: seed for the randomizer, 0 for random initialization
+     */
+    void initRandom(int seed = 0);
 };
 
 
