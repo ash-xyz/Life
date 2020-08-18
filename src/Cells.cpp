@@ -19,12 +19,18 @@ Cells::~Cells() {
     delete[] temp;
 }
 
-void Cells::initRandom(int seed) {
-    srand(time(NULL));
+void Cells::initRandom(int seed , double epsilon) {
+    //Initializes seed
+    if (seed == 0)
+        srand(time(NULL));
+    else
+        srand(seed);
+
+    // Turns on cells
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
-            if (double (rand())/RAND_MAX < 0.2)
-                setCell(i, j);
+            if (double (rand())/RAND_MAX < epsilon)
+            setCell(i, j);
         }
     }
 }

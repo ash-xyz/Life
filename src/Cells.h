@@ -32,8 +32,17 @@ private:
     void clearCell(unsigned int y, unsigned int x);
 
 public:
+    /**
+     * Constructor for the cells
+     *
+     * @param width: width of the cells
+     * @param height: height of the cells
+     */
     Cells(unsigned int width, unsigned int height);
 
+    /**
+     * Destructor for the cells
+     */
     ~Cells();
 
     /**
@@ -59,11 +68,12 @@ public:
     void switchCell(int y, int x);
 
     /**
-     * Randomly initializes the cells
+     * Initializes the cells
      *
      * @param seed: seed for the randomizer, 0 for random initialization
+     * @param epsilon: Expect number of activations
      */
-    void initRandom(int seed = 0);
+    void initRandom(int seed = 0, double epsilon = 0.2);
 };
 
 
