@@ -5,8 +5,6 @@
 #ifndef LIFE_CELLS_H
 #define LIFE_CELLS_H
 
-#include "vector"
-
 class Cells {
 private:
     unsigned char *cells;

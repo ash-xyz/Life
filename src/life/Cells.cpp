@@ -45,6 +45,7 @@ void Cells::setCell(unsigned int y, unsigned int x) {
     int left, right, top, bot;
     unsigned char *cell = cells + (y * width) + x;
 
+    //Takes cares of border cells
     if (x == 0)
         left = width - 1;
     else
@@ -77,6 +78,7 @@ void Cells::clearCell(unsigned int y, unsigned int x) {
     int left, right, top, bot;
     unsigned char *cell = cells + (y * width) + x;
 
+    //Takes cares of border cells
     if (x == 0)
         left = width - 1;
     else

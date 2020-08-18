@@ -2,19 +2,20 @@
 // Created by ash on 11/08/2020.
 //
 #include <SFML/Graphics.hpp>
-#include "Cells.h"
+#include "life/Cells.h"
 
 #define WHITE sf::Color::White
 #define BLACK sf::Color::Black
 #define GRAY sf::Color(153, 153, 153)
 
 int main() {
-    const int CELL_SIZE = 30;
+    const int CELL_SIZE = 20;
     const sf::Vector2f CELL_VECTOR(CELL_SIZE, CELL_SIZE);
-    const int GRID_WIDTH = 30;
-    const int GRID_HEIGHT = 20;
+    const int GRID_WIDTH = 50;
+    const int GRID_HEIGHT = 40;
 
     Cells cells(GRID_WIDTH, GRID_HEIGHT);
+    cells.initRandom();
 
     int delay = 100;
     bool isPlaying = true;
