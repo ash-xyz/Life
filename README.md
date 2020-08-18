@@ -9,7 +9,7 @@ Using an inspired approach from [The Graphics Programming Black Book](http://www
 
 ![Cell](images/cellFormat.jpg)
 
-This along with other minor optimizations gives us an almost 30x compute improvement.
+This along with other minor optimizations gives us an almost 30x compute improvement over naive approaches.
 
 ## Dependencies
 CMake was used to create create build files, you can install it using the instructions on their website
