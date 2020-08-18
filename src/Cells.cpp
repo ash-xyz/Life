@@ -24,7 +24,7 @@ void Cells::initRandom(int seed) {
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (double (rand())/RAND_MAX < 0.2)
-            setCell(i, j);
+                setCell(i, j);
         }
     }
 }
